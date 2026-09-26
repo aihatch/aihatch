@@ -1,0 +1,34 @@
+// 无文件时
+.noFolder {
+    padding: 20px;
+    font-size: 12px;
+
+    &>p {
+        line-height: 2em;
+        margin-top: 20px;
+        color: #747179;
+
+        &>a {
+            font-size: 14px;
+            font-family: cursive;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+    }
+
+    &>input[type='button'] {
+        line-height: 26px;
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: #816e9e;
+
+        &:hover {
+            background-color: #705697;
+        }
+    }
+}
