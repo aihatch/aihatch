@@ -3,3 +3,18 @@
 'use strict';
 
 process.title = '@aihatch/cli';
+
+const Workspace = require("../common/workspace");
+
+// CLI 端：工具的根目录跟随命令行当前目录，而非持久化的 ~/.aihatch/workspace
+Workspace.useCwd();
+
+const arg = process.argv[2];
+
+if (arg === "--task" || arg === "-t") {
+    require("./commands/task")();
+} else if (arg === "model") {
+    require("./commands/model")();
+} else {
+    require("./commands/help")();
+}

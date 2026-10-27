@@ -14,3 +14,4 @@ index.js
 preload.js
 babel.config.js
 !bin/*
+!common/*

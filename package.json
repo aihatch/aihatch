@@ -1,6 +1,6 @@
 {
   "name": "aihatch",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0",
   "description": "简单好用的日常生活&办公助手，基于AI技术，提供智能化的功能和服务",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,8 @@
   "license": "MIT",
   "author": "zxl20070701",
   "dependencies": {
+    "@auipage/agent": "^0.1.0",
+    "@auipage/core": "^0.1.0",
     "oipage": "^2.1.0"
   },
   "build": {
@@ -79,6 +81,7 @@
     }
   },
   "devDependencies": {
+    "@auipage/react": "^0.1.0",
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",

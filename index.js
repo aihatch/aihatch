@@ -4,6 +4,8 @@ const path = require('path');
 function createWindow() {
     // 创建浏览器窗口
     let win = new BrowserWindow({
+        width: 850,
+        height: 600,
         resizable: true,
         frame: false,
         webPreferences: {
@@ -13,9 +15,6 @@ function createWindow() {
             contextIsolation: true
         }
     });
-
-    //  默认最大化
-    win.maximize();
 
     // 开发模式
     if (process.env.NODE_ENV == 'development') {
@@ -39,6 +38,7 @@ app.whenReady().then(() => {
 
     // 监听来自主界面的请求
     require('./nodejs/ipcMain.on.js')(win);
+    require('./nodejs/api.on.js')(win);
 
     setTimeout(() => {
 

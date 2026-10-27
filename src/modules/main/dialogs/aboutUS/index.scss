@@ -1,26 +1,37 @@
+/* ============================================================
+   关于我们弹窗 —— 天蓝主题
+   ============================================================ */
 .info-view {
     position: fixed;
-    left: calc(50vw - 130px);
-    top: calc(50vh - 250px);
-    background-color: transparent;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, #ffffff 0%, #eaf4fb 100%);
     user-select: none;
-    border-radius: 10px;
-    width: 260px;
-    height: 370px;
-    background-color: #dbdde0;
-    border-radius: 10px;
+    border-radius: 14px;
+    width: 280px;
+    height: 380px;
     text-align: center;
     padding-top: 20px;
-    box-shadow: #607D8B 0px 0px 14px 3px;
+    box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25), 0 2px 12px rgba(56, 189, 248, 0.18);
+    border: 1px solid rgba(125, 211, 252, 0.6);
+    color: #334155;
+    font-size: 13px;
+    animation: aboutIn 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 
     &>header {
         font-weight: 800;
         padding-top: 20px;
+        color: #1e293b;
+        font-size: 16px;
+        letter-spacing: 1px;
 
         &>div {
             font-size: 12px;
             line-height: 2em;
-            font-weight: 200;
+            font-weight: 300;
+            color: #0369a1;
+            letter-spacing: 0;
         }
     }
 
@@ -28,7 +39,7 @@
         &.tips {
             font-size: 12px;
             color: #ffffff;
-            background-color: #e91e63;
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
             position: fixed;
             z-index: -1;
             user-select: none;
@@ -38,6 +49,8 @@
             left: 5vw;
             top: 10px;
             text-align: center;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
         }
 
         &.current-tips {
@@ -60,8 +73,10 @@
             width: 60px;
             height: 60px;
             margin: auto;
-            background-color: white;
-            border-radius: 10px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
+            border: 1px solid rgba(125, 211, 252, 0.5);
         }
 
         &.content {
@@ -73,7 +88,7 @@
                 margin-top: 20px;
                 text-align: left;
                 text-indent: 2em;
-                color: rgb(56, 55, 55);
+                color: #475569;
 
                 &>h2 {
                     display: inline-block;
@@ -85,7 +100,7 @@
                     font-weight: 800;
                     margin: 0 5px;
                     text-decoration: underline;
-                    color: #2196F3;
+                    color: #075985;
                 }
             }
         }
@@ -97,23 +112,45 @@
             width: 100%;
 
             &>.btn {
-                color: #363737;
+                color: #075985;
                 width: 110px;
                 line-height: 30px;
-                border-radius: 5px;
+                border-radius: 8px;
                 display: inline-block;
                 font-size: 13px;
+                font-weight: 500;
                 cursor: pointer;
+                transition: all ease-in-out 180ms;
+                border: 1px solid rgba(125, 211, 252, 0.6);
 
                 &:first-child {
-                    background-color: #c1c3c6;
+                    background-color: #eaf4fb;
                 }
 
                 &:last-child {
                     margin-left: 10px;
-                    background-color: #b5b7ba;
+                    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+                    color: #ffffff;
+                    border: none;
+                }
+
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
                 }
             }
         }
+    }
+}
+
+@keyframes aboutIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
